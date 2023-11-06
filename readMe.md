@@ -1,7 +1,10 @@
 ### hi and welcome to my readMe !! ###
 
 ## DESCRIPTION ##
-> this project is based off of the popular online game "Google Feud" **(https://googlefeud.com/)**, that is inspired by the autocomplete function of the Google search engine. in the game, the player fills in the blanks of partial search queries to find most common autocomplete suggestions for that partial search query. 
+> this project is based off of the popular online game "Google Feud" **(https://googlefeud.com/)**, that is inspired by the autocomplete function of the Google search engine. in the game, the player fills in the blanks of partial search queries to find most common autocomplete suggestions for that partial search query.
+<video src='https://drive.google.com/file/d/1BU75NJd6N0ixr5tLrCfJ3A-SXYQ52Rj_/view?usp=sharing' width=180/>
+
+
 > i took inspiration from this game and recreated it with PyTrends, a Python library which makes accessing the Google Trends API easier. although not 100% the same, i used its related queries function to find the top related queries to certain keywords. 
 
 ## INSTRUCTIONS ##
