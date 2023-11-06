@@ -29,7 +29,7 @@ logoLabel.grid(row=0) # putting it at the top of the logoFrame
 
 # entry box for guessing!
 myEntry = Entry(logoFrame, font="Monaco 12")
-myEntry.insert(0, 'what is the top related query for "' + str(metrics.keyword) + '"?: ') # puts text there as a promt
+myEntry.insert(0, 'what is the top related query for "' + str(metrics.keyword) + '"?: (delete me)') # puts text there as a prompt
 myEntry.grid(row=1, sticky=W+E) # sticky to make it span across the row
 
 # blank for spacing
@@ -231,7 +231,7 @@ def guessing(guess, mlist, console_list):
 
         temp_list = mlist[i].split() # for easier traversal!
 
-        if guess.lower() in mlist[i]: # it's a hit (correct guess)
+        if guess.lower() in temp_list and guess.lower() != metrics.keyword: # it's a hit (correct guess)
             hit = True
             
             for n in range(0,len(temp_list)): # use a split() and an extra list to find specifically where it is (if there's multiple words in that query)
