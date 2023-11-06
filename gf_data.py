@@ -76,20 +76,24 @@ def mlist_set_up(dictionary):
 
     # turning the dictionary into a list for easier access/manipulation (random access hehe)
     for i in dictionary:
-        mlist.append(dictionary[i])
+        mlist.append(dictionary[i].strip())
 
+        if mlist[-1] == metrics.keyword:
+            mlist.pop()
+
+        else:
         # bc the hl (home language) function of pytrends doesn't seem to work 100% of the time
-        notEng = True
-        count = 0
+            notEng = True
+            count = 0
 
-        while notEng and count < len(alphabet):
-            if alphabet[count] in dictionary[i]:
-                notEng = False
-            else:
-                count += 1
+            while notEng and count < len(alphabet):
+                if alphabet[count] in dictionary[i]:
+                    notEng = False
+                else:
+                    count += 1
 
-        if notEng:
-            mlist.pop() # bye bye sorry foreign language search result :)
+            if notEng:
+                mlist.pop() # bye bye sorry foreign language search result :)
     
     mlist.pop() # making sure further items don't go out of range elsewhere 
 
