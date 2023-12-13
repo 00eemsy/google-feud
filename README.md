@@ -1,29 +1,48 @@
-## DESCRIPTION ##
-> this project is based off of the popular online game "Google Feud" **(https://googlefeud.com/)**, that is inspired by the autocomplete function of the Google search engine. in the game, the player fills in the blanks of partial search queries to find most common autocomplete suggestions for that partial search query.
+## 👩🏻‍💻 DESCRIPTION
+> welcome to `google feud 🔍`, a game that asks you to embody your inner google autocomplete and fill in the blanks for the most common autocomplete suggestions of a certain prompt! this project was heavily inspired by the popular online game, [**google feud**](https://googlefeud.com/).
 
-a successful attempt: 
-![](https://github.com/00eemsy/google-feud/blob/main/success.gif)
+![](./visuals/opening-still)
+⬆️ opening still of `google feud`
+<br>
+> i recreated the game with the [**pytrends API**](https://pypi.org/project/pytrends/), an API that connects to google trends for stats on top queries, related queries, etc. with the data from this API, this game was born. and to beautify the project, i used [**tkinter**](https://docs.python.org/3/library/tkinter.html), a python GUI.
 
-a failed attempt:
-![](https://github.com/00eemsy/google-feud/blob/main/fail.gif)
+> this project was a result of a penchant to learn about what makes software _software_ in this day and age. my uni's curriculum is heavily concepts-based, which is definitely necessary and important information, but i was curious about how to translate that theoretical knowledge into practice. enjoy my little experiment!
 
-> i took inspiration from this game and recreated it with PyTrends, a Python library which makes accessing the Google Trends API easier. although not 100% the same, i used its related queries function to find the top related queries to certain keywords. 
+## 💡 INSTRUCTIONS 
+* delete the prompt in the query box
+* using the length of the blanked-out top queries, type in your guess for the top-most related query for _x_ prompt
+* press the "guess" button
+* if you are wrong, your "errors" count will go up by one. if you are right, your "score" will go up by one and you'll see that prompt filled in on your screen. 
+* continue guessing! too many errors and your game will end; if you fill in every blanked-out query, you win!
 
-## INSTRUCTIONS ##
-> delete the prompt text & type in what you believe to be the top related query given the keyword into the entry box. -> press the guess button -> continue until you lose or win
+### other details 🌟
+* to customize the prompt, go into `gf_metrics.py` and replace the string value of the `self.keyword` variable.
+![](./visuals/keyword.gif)
 
-## MY FILES ##
-**gf_data.py**
-- purpose: organize PyTrends data and convert into accessible/readable lists
-- contains: clean_data, mlist_set_up, console_list_set_up
+##  📦 INSTALLING AND RUNNING 
+1. from [00eemsy/google-feud](https://github.com/00eemsy/google-feud), download the following files:
+    * `gf_data.py` (utilizes the pytrend api's query data and makes it more comprehensible)
+    * `gf_metrics.py` (stores global variables)
+    * `gf_tk.py` (runs the game mechanics and GUI)
+    * `gf.png` (google feud logo, used in the GUI)
+2. using your preferred console, type the following:
+```
+python3 gf_tk.py
+```
+this will redirect you to a pop-up window 
+<br>
+* sometimes pytrends return this error: `pytrends.exceptions.TooManyRequestsError: The request failed: Google returned a response with code 429`. completely normal! sometimes google trends is overwhelmed by requests, just run the above console entry again.
 
-**gf_metrics.py**
-- purpose: hold Metrics class for its globally accessible variables
-- contains: class Metrics
 
-**gf_tk.py**
-- purpose: 1. set up tkinter gui, 2. create functions that interact/update these gui elements to run game successfully
-- contains: tkinter window set up, print_to_tkinter, check_if_winning, guessing
+## 🎮 DEMOS 
+_a successful attempt_
+![](./visuals/success.gif)
 
-## MISC ##
-> have questions? noticed bugs? suggestions? please reach out at **eyu@reed.edu**
+_a failed attempt_
+![](./visuals/fail.gif)
+
+_winning the game_
+![](./visuals/win.gif)
+
+_losing the game_
+![](./visuals/loss.gif)
