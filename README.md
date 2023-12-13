@@ -1,5 +1,3 @@
-### hi and welcome to my README !! ###
-
 ## DESCRIPTION ##
 > this project is based off of the popular online game "Google Feud" **(https://googlefeud.com/)**, that is inspired by the autocomplete function of the Google search engine. in the game, the player fills in the blanks of partial search queries to find most common autocomplete suggestions for that partial search query.
 
