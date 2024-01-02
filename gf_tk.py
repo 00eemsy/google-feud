@@ -236,14 +236,10 @@ def guessing(guess, mlist, console_list):
             
             for n in range(0,len(temp_list)): # use a split() and an extra list to find specifically where it is (if there's multiple words in that query)
 
-                if guess.lower() in temp_list[n] and console_list[clist_count] != guess.lower(): # if it's a hit and this hasn't alr been answered ... (console_list still has a blank there and not the actual word)
-                    console_list[clist_count] = guess.lower()
+                if guess.lower() in temp_list[n] and "_" in console_list[clist_count]: # if this specific word in the query is blank...
+                    metrics.score += 1 # adding to score (to avoid awarding too many points)
 
-                    metrics.score += 1 # adding to score
-
-                else:
-                    console_list[clist_count] = temp_list[n] # fill in the rest of the search result but do not reward points !!
-
+                console_list[clist_count] = temp_list[n] # fill in the blanks 
                 clist_count += 1 # keeps updating so can access console list properly
 
         else: # it's a miss
