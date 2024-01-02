@@ -1,22 +1,23 @@
 ## 👩🏻‍💻 DESCRIPTION
-> welcome to `google feud 🔍`, a game that asks you to embody your inner google autocomplete and fill in the blanks for the most common autocomplete suggestions of a certain prompt! this project was heavily inspired by the popular online game, [**google feud**](https://googlefeud.com/).
+welcome to `google feud 🔍`, a game that asks you to embody your inner google autocomplete and fill in the blanks for the most common autocomplete suggestions of a certain prompt! this project was heavily inspired by the popular online game, [**google feud**](https://googlefeud.com/).
 
+i recreated the game with the [**pytrends API**](https://pypi.org/project/pytrends/), an API that connects to google trends for stats on top queries, related queries, etc. with the data from this API, this game was born. and to beautify the project, i used [**tkinter**](https://docs.python.org/3/library/tkinter.html), a python GUI.
+
+this project was a result of a penchant to learn about what makes software _software_ in this day and age. my uni's curriculum is heavily concepts-based, which is definitely necessary and important information, but i was curious about how to translate that theoretical knowledge into practice. enjoy my little experiment!
+
+⬇️ opening still of `google feud`
 ![](./visuals/opening-still)
-⬆️ opening still of `google feud`
 <br>
-> i recreated the game with the [**pytrends API**](https://pypi.org/project/pytrends/), an API that connects to google trends for stats on top queries, related queries, etc. with the data from this API, this game was born. and to beautify the project, i used [**tkinter**](https://docs.python.org/3/library/tkinter.html), a python GUI.
-
-> this project was a result of a penchant to learn about what makes software _software_ in this day and age. my uni's curriculum is heavily concepts-based, which is definitely necessary and important information, but i was curious about how to translate that theoretical knowledge into practice. enjoy my little experiment!
 
 ## 💡 INSTRUCTIONS 
 * delete the prompt in the query box
-* using the length of the blanked-out top queries, type in your guess for the top-most related query for _x_ prompt
+* using the length of the underscored prompts, type in your guess for the top-most related query for _x_ prompt
 * press the "guess" button
 * if you are wrong, your "errors" count will go up by one. if you are right, your "score" will go up by one and you'll see that prompt filled in on your screen. 
-* continue guessing! too many errors and your game will end; if you fill in every blanked-out query, you win!
+* continue guessing! too many errors and your game will end; if you fill in every blank on the screen, you win!
 
 ### other details 🌟
-* to customize the prompt, go into `gf_metrics.py` and replace the string value of the `self.keyword` variable.
+* to customize the prompt, go into `gf_metrics.py` and replace the string value of the `self.keyword` variable. it must be a singular word only; **multiple words cause the prompts to populate incorrectly.**
 ![](./visuals/keyword.gif)
 
 ##  📦 INSTALLING AND RUNNING 
