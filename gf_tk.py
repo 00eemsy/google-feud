@@ -231,12 +231,12 @@ def guessing(guess, mlist, console_list):
 
         temp_list = mlist[i].split() # for easier traversal!
 
-        if guess.lower() in temp_list and guess.lower() != metrics.keyword: # it's a hit (correct guess)
+        if guess.lower() in mlist[i]: # it's a hit (correct guess)
             hit = True
             
             for n in range(0,len(temp_list)): # use a split() and an extra list to find specifically where it is (if there's multiple words in that query)
 
-                if temp_list[n] == guess.lower() and console_list[clist_count] != guess.lower(): # if it's a hit and this hasn't alr been answered ... (console_list still has a blank there and not the actual word)
+                if guess.lower() in temp_list[n] and console_list[clist_count] != guess.lower(): # if it's a hit and this hasn't alr been answered ... (console_list still has a blank there and not the actual word)
                     console_list[clist_count] = guess.lower()
 
                     metrics.score += 1 # adding to score
