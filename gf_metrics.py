@@ -11,6 +11,6 @@ class Metrics:
     def __init__(self):
         self.errors = 0
         self.score = 0
-        self.keyword = "gatorade" # fill in the blank!
+        self.keyword = "gatorade" # fill in the blank! singular words only :,)
 
 metrics = Metrics()
