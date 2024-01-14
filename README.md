@@ -16,7 +16,7 @@ This project was a result of a penchant to learn about what makes software _soft
 * If you are wrong, your "errors" count will go up by one. If you are right, your "score" will go up by one and you'll see that prompt filled in on your screen. 
 * Continue guessing! Too many errors and your game will end; if you fill in every blank on the screen, you win!
 
-### other details 🌟
+### Other Details 🌟
 * To customize the prompt, go into `gf_metrics.py` and replace the string value of the `self.keyword` variable. It must be a singular word only; **multiple words cause the prompts to populate incorrectly.**
 ![](./visuals/keyword.gif)
 
