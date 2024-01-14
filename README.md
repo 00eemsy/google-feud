@@ -6,7 +6,7 @@ I recreated the game with the [**Pytrends API**](https://pypi.org/project/pytren
 This project was a result of a penchant to learn about what makes software _software_ in this day and age. My university's curriculum is heavily concepts-based, which is definitely necessary and important information, but I was curious about how to translate that theoretical knowledge into practice. Enjoy my little experiment!
 
 ⬇️ Opening still of `google feud`
-![](./visuals/opening-still)
+![](./visuals/opening-still.png)
 <br>
 
 ## 💡 INSTRUCTIONS 
@@ -32,7 +32,11 @@ python3 gf_tk.py
 ```
 This will redirect you to a pop-up window 
 <br>
-* Sometimes Pytrends return this error: `pytrends.exceptions.TooManyRequestsError: The request failed: Google returned a response with code 429`. completely normal! Sometimes Google Trends is overwhelmed by requests, just run the above console entry again.
+* Sometimes Pytrends return this error:
+```
+pytrends.exceptions.TooManyRequestsError: The request failed: Google returned a response with code 429
+```
+ Completely normal! Sometimes Google Trends is overwhelmed by requests, just run the above console entry again.
 
 
 ## 🎮 DEMOS 
