@@ -48,6 +48,3 @@ _A failed attempt_
 
 _Winning the game_
 ![](./visuals/win.gif)
-
-_Losing the game_
-![](./visuals/loss.gif)
