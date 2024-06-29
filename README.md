@@ -40,11 +40,11 @@ pytrends.exceptions.TooManyRequestsError: The request failed: Google returned a 
 
 
 ## 🎮 DEMOS 
-_A successful attempt_
+_A successful attempt:_
 ![](./visuals/success.gif)
 
-_A failed attempt_
+_A failed attempt:_
 ![](./visuals/fail.gif)
 
-_Winning the game_
+_Winning the game:_
 ![](./visuals/win.gif)
